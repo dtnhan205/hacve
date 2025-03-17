@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Clip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .status {
+            font-weight: bold;
+            color: green;
+        }
+        .time {
+            color: red;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Trạng thái: <span class="status">Online</span></p>
+        <p>Thời gian: <span class="time" id="time">24:00:00</span></p>
+        <ul>
+            <li><input type="checkbox"> Antiband - AntiBlack List</li>
+            <li><input type="checkbox"> Fix Rung 40%</li>
+            <li><input type="checkbox"> Giảm Tình Trạng Lag Máy</li>
+            <li><input type="checkbox"> Buff Fps Cao Ổn Định</li>
+            <li><input type="checkbox"> AimLock Config</li>
+            <li><input type="checkbox"> Nhẹ Tâm</li>
+            <li><input type="checkbox"> HeadShot 90%</li>
+            <li><input type="checkbox"> AimHead</li>
+            <li><input type="checkbox"> Tăng Nhạy</li>
+            <li><input type="checkbox"> Code Chạy Ngầm Máy</li>
+            <li><input type="checkbox"> HeadLock Config</li>
+            <li><input type="checkbox"> Broken Head</li>
+        </ul>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById("time").textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
